@@ -129,7 +129,7 @@ const HomePage = () => {
             {loading && <Spinner />}
             <div className="filters m-2">
                 <div>
-                    <h6>Select Frequency</h6>
+                    <h6 className='text-danger'>Select Frequency</h6>
                     <Select value={frequency} onChange={(values) => setFrequency(values)}>
                         <Select.Option value='7'>LAST 1 Week</Select.Option>
                         <Select.Option value='30'>LAST 1 Month</Select.Option>
@@ -139,7 +139,7 @@ const HomePage = () => {
                     {frequency === 'custom' && <RangePicker value={selectedDate} onChange={(values) => setSelectedDate(values)} />}
                 </div>
                 <div>
-                    <h6>Select Type</h6>
+                    <h6 className='text-danger'>Select Type</h6>
                     <Select value={type} onChange={(values) => setType(values)}>
                         <Select.Option value='all'>ALL</Select.Option>
                         <Select.Option value='income'>Income</Select.Option>

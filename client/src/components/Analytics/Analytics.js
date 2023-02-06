@@ -57,7 +57,7 @@ const Analytics = ({ allTransection }) => {
                 <div className="col d-inline-flex">
                     {/* Income Categorywies*/}
                     <div className="col">
-                        <h4>Categorywies Income</h4>
+                        <h4 className='text-danger'>Categorywies Income</h4>
                         {
                             categories.map(category => {
                                 const amount = allTransection.filter(transaction => transaction.type === 'income' && transaction.category === category).reduce((acc, transaction) => acc + transaction.amount, 0);
@@ -75,7 +75,7 @@ const Analytics = ({ allTransection }) => {
                     </div>
                     {/*Expense  Categorywies */}
                     <div className="col">
-                        <h4>Categorywies Expense</h4>
+                        <h4 className='text-danger'>Categorywies Expense</h4>
                         {
                             categories.map(category => {
                                 const amount = allTransection.filter(transaction => transaction.type === 'expense' && transaction.category === category).reduce((acc, transaction) => acc + transaction.amount, 0);
