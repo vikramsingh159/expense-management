@@ -35,13 +35,13 @@ const Register = () => {
                 <Form layout="vertical" onFinish={submitHandler}>
                     <h1 className="text-danger">Register Form</h1>
                     <Form.Item label="Name" name="name">
-                        <Input />
+                        <Input type="text" required />
                     </Form.Item>
                     <Form.Item label="Email" name="email">
-                        <Input type="email" />
+                        <Input type="email" required />
                     </Form.Item>
                     <Form.Item label="Password" name="password">
-                        <Input type="password" />
+                        <Input type="password" required />
                     </Form.Item>
                     <div className="d-flex justify-content-between align-items-center">
                         <Link to="/login" className="text-decoration-none text-danger">Already Register ? Cleck Here to login</Link>

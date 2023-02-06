@@ -41,10 +41,10 @@ const Login = () => {
                     <h1 className="text-danger" >Login Form</h1>
 
                     <Form.Item label="Email" name="email">
-                        <Input type="email" />
+                        <Input type="email" required />
                     </Form.Item>
                     <Form.Item label="Password" name="password">
-                        <Input type="password" />
+                        <Input type="password" required />
                     </Form.Item>
                     <div className="d-flex justify-content-between align-items-center">
                         <Link to="/register" className="text-decoration-none text-danger">Not a user ? Cleck Here to regsiter</Link>

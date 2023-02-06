@@ -165,7 +165,7 @@ const HomePage = () => {
             <Modal title={editable ? 'Edit Transaction' : 'Add Transection'} open={showModal} onCancel={() => setShowModal(false)} footer={false}>
                 <Form layout='vertical' onFinish={handleSubmit} initialValues={editable}>
                     <Form.Item label='Amount' name='amount'>
-                        <Input type='text' />
+                        <Input type='text' required />
                     </Form.Item>
                     <Form.Item label='Type' name='type'>
                         <Select>
@@ -187,13 +187,13 @@ const HomePage = () => {
                         </Select>
                     </Form.Item>
                     <Form.Item label='Date' name='date'>
-                        <Input type='date' />
+                        <Input type='date' required />
                     </Form.Item>
                     <Form.Item label='Reference' name='refrence'>
-                        <Input type='text' />
+                        <Input type='text' required />
                     </Form.Item>
                     <Form.Item label='Description' name='description'>
-                        <Input type='text' />
+                        <Input type='text' required />
                     </Form.Item>
                     <div className="d-flex justify-content-end">
                         <button type="submit" className='btn btn-primary'>SAVE</button>
