@@ -1,0 +1,11 @@
+/* Filter Section */
+.filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 0 3px gray;
+}
+
+/* cart Section */
