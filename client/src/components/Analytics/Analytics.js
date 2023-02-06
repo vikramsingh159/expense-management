@@ -23,7 +23,8 @@ const Analytics = ({ allTransection }) => {
 
             <div className="row">
                 <div className="col d-inline-flex">
-                    <div className="col">
+                    <div className="col mx-2">
+                        <h4 className='text-danger text-center'>Total Transactions</h4>
                         <div className="card">
                             <div className="card-header">
                                 Total Transactions : {totalTransaction}
@@ -32,13 +33,14 @@ const Analytics = ({ allTransection }) => {
                                 <h5 className='text-success'>Income : {totalIncomeTransactions.length}</h5>
                                 <h5 className='text-danger'>Expense : {totalExpenseTransactions.length}</h5>
                                 <div>
-                                    <Progress type='circle' strokeColor={'green'} className='mx-2' percent={totalIncomePercent.toFixed(0)} />
+                                    <Progress type='circle' strokeColor={'green'} className='mx-2 my-2' percent={totalIncomePercent.toFixed(0)} />
                                     <Progress type='circle' strokeColor={'red'} className='mx-2' percent={totalExpensePercent.toFixed(0)} />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col">
+                        <h4 className='text-danger text-center'>Total Turnover</h4>
                         <div className="card">
                             <div className="card-header">
                                 Total Turnover : {totalTurnover}
@@ -47,7 +49,7 @@ const Analytics = ({ allTransection }) => {
                                 <h5 className='text-success'>Income : {totalIncomeTurnover}</h5>
                                 <h5 className='text-danger'>Expense : {totalExpenseTurnover}</h5>
                                 <div>
-                                    <Progress type='circle' strokeColor={'green'} className='mx-2' percent={totalIncomeTurnoverPercent.toFixed(0)} />
+                                    <Progress type='circle' strokeColor={'green'} className='mx-2 my-2' percent={totalIncomeTurnoverPercent.toFixed(0)} />
                                     <Progress type='circle' strokeColor={'red'} className='mx-2' percent={totalExpenseTurnoverPercent.toFixed(0)} />
                                 </div>
                             </div>
@@ -56,8 +58,8 @@ const Analytics = ({ allTransection }) => {
                 </div>
                 <div className="col d-inline-flex">
                     {/* Income Categorywies*/}
-                    <div className="col">
-                        <h4 className='text-danger'>Categorywies Income</h4>
+                    <div className="col mx-2">
+                        <h4 className='text-danger text-center'>Category Income</h4>
                         {
                             categories.map(category => {
                                 const amount = allTransection.filter(transaction => transaction.type === 'income' && transaction.category === category).reduce((acc, transaction) => acc + transaction.amount, 0);
@@ -75,7 +77,7 @@ const Analytics = ({ allTransection }) => {
                     </div>
                     {/*Expense  Categorywies */}
                     <div className="col">
-                        <h4 className='text-danger'>Categorywies Expense</h4>
+                        <h4 className='text-danger text-center'>Category Expense</h4>
                         {
                             categories.map(category => {
                                 const amount = allTransection.filter(transaction => transaction.type === 'expense' && transaction.category === category).reduce((acc, transaction) => acc + transaction.amount, 0);
